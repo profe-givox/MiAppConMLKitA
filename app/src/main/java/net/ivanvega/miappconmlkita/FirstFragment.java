@@ -63,7 +63,7 @@ public class FirstFragment extends Fragment {
     ) {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
-
+        mGraphicOverlay = binding.graphicOverlay;
         binding.btnMLF.setOnClickListener(view -> {
             tomarFoto();
 
@@ -94,7 +94,7 @@ public class FirstFragment extends Fragment {
                         new OnSuccessListener<List<Face>>() {
                             @Override
                             public void onSuccess(@NonNull List<Face> faces) {
-                                processFaces(faces);
+                                //processFaces(faces);
                                 processFaceContourDetectionResult(faces);
                             }
                         }
